@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRAD0034.Views.PageLista"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout    BackgroundColor="PowderBlue">
+            <Label Text="Lista de Pagos"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   TextColor="Black"/>
+            <CollectionView x:Name="listaPagos"
+                            Margin="25,5,25,5">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout  Orientation="Vertical"
+                                        ItemSpacing="25"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout    BackgroundColor="LightBlue">
+                            <Label  Text="{Binding Id_pago}"
+                                    TextColor="Black"/>
+                            <Label  Text="{Binding Descripcion}"
+                                    TextColor="Black"/>
+                            <Label  Text="{Binding Monto}"
+                                    TextColor="Black"/>
+                            <Label  Text="{Binding Fecha}"
+                                    TextColor="Black"/>
+                            <Image  HeightRequest="180"
+                                    WidthRequest="180"
+                                    HorizontalOptions="Start"
+                                    Aspect="AspectFit"
+                                    Source="{Binding Photo_recibo, Converter={StaticResource ByteArrayToImageSourceConverter}}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

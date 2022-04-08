@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRAD0034.Views.PageInicio">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="PowderBlue">
+            <Image Source="logoUCENM.png"
+                   Aspect="Fill"
+                   HeightRequest="200"
+                   WidthRequest="300"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"/>
+            <Label Text="Pagos UCENM"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   Margin="0,0,0,20"/>
+            <Button Text="Agregar Pago"
+                    x:Name="btn_pago"
+                    TextColor="Black"
+                    Margin="110,5,110,5"
+                    Clicked="btn_pago_Clicked"/>
+            <Button Text="Lista de Pagos"
+                    x:Name="btn_lista"
+                    TextColor="Black"
+                    Margin="110,5,110,5"
+                    Clicked="btn_lista_Clicked"/>
+            <Button Text="Eliminar Pago"
+                    x:Name="btn_del"
+                    TextColor="Black"
+                    Margin="110,5,110,5"
+                    Clicked="btn_del_Clicked"/>
+            <Button Text="Modificar Pago"
+                    x:Name="btn_mod"
+                    TextColor="Black"
+                    Margin="110,5,110,5"
+                    Clicked="btn_mod_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

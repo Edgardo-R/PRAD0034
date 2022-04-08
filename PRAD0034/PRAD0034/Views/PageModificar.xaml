@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRAD0034.Views.PageModificar">
+    <ContentPage.Content>
+        <StackLayout    BackgroundColor="PowderBlue">
+            <Label Text="Modificar Pago"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   TextColor="Black"/>
+            <Image  x:Name="foto"
+                    BackgroundColor="LightBlue"
+                    HeightRequest="170"
+                    WidthRequest="100"
+                    Margin="25,5,25,5"/>
+            <Button Text="Tomar Foto"
+                    x:Name="btn_tomar"
+                    TextColor="Black"
+                    Margin="110,5,110,5"
+                    Clicked="btn_tomar_Clicked"/>
+            <Entry  Placeholder="Id Pago"
+                    x:Name="id_pago"
+                    Keyboard="Numeric"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="25,10,5,5"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"/>
+            <Entry  Placeholder="Descripcion"
+                    x:Name="descripcion"
+                    Keyboard="Text"
+                    VerticalOptions="Start"
+                    Margin="25,5,25,5"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"/>
+            <Entry  Placeholder="Monto"
+                    x:Name="monto"
+                    Keyboard="Numeric"
+                    VerticalOptions="Start"
+                    Margin="25,5,5,5"
+                    HorizontalOptions="Start"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"/>
+            <Label  Text="Fecha"
+                    TextColor="Black"
+                    Margin="25,0,5,0"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"/>
+            <DatePicker Format="dd/MM/yyyy"
+                        x:Name="fecha"
+                        Margin="25,0,25,5"
+                        HorizontalOptions="Start"/>
+            <Button Text="Actualizar Pago"
+                    x:Name="btn_actualizar"
+                    TextColor="Black"
+                    Margin="110,5,110,5"
+                    Clicked="btn_actualizar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
